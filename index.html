@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="ajax.js"></script>
+    <style>
+        .add {
+            display: block;
+            width:auto;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn1" value="读取" /><br />
+<ul id="ul1"></ul>
+<script>
+    /*window.onload = function (){
+       var oBtn = document.getElementById("btn1");
+        var oUl = document.getElementById("ul1");
+        oBtn.onclick = function (){
+            ajax('aaa.txt?t='+ new Date().getTime(), function(str){
+                var arr = eval(str);
+                for (i=0; i<arr.length; i++){
+                    var oLi = document.createElement("li");
+                    oLi.innerHTML = "用户名：<strong>"+ arr[i].user + "</strong>密码：<span>" + arr[i].pass + "</span>";
+                    oUl.appendChild(oLi);
+                    oUl.setAttribute("class","add")
+                }
+            },function (){
+                alert("失败");
+            });
+        };
+    }*/
+
+    var clickNum = 0;
+    document.body.onclick = function () {
+        clickNum++;
+        alert(clickNum);
+    }
+</script>
+</body>
+</html>
